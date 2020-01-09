@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 2.8.12.2)
+set(PROJECT_VERSION 0.01)
+
+project(Zues-v${PROJECT_VERSION})
+set(EXE_CODENAME Zues-v${PROJECT_VERSION})
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+if(CMAKE_VERSION VERSION_LESS "3.7.0")
+	set(CMAKE_INCLUDE_DIR ON)
+endif()
+
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
+#find_package(Qt5 COMPONENTS ${MISSING_COMPONENTS} REQUIRED)
+#TODO: Add source files into this manually
+set(${EXE_CODENAME}_SRCS )
+set(${EXE_CODENAME}_PROTOTYPES )
+set(${EXE_CODENAME}_UI )
+set(${EXE_CODENAME}_RESOURCES resources.qrc)
+
+add_executable(${EXE_CODENAME}
+	${${EXE_CODENAME}_SRCS}
+	${${EXE_CODENAME}_PROTOTYPES}
+	${${EXE_CODENAME}_UI}
+	${${EXE_CODENAME}_RESOURCES}
+)
