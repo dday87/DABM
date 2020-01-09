@@ -17,7 +17,8 @@ time KBUILD_TIMESTAMP='' CC="gcc" CXX="g++" make -j $(nproc) | tee make-log-5.5-
 sudo make modules_install
 sudo make install
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-sudo grubby --set-default /boot/vmlinuz-5.5-rc5
-grubby --info=ALL | more
-grubby --default-index
-grubby --default-kernel
+sudo grubby --set-default /boot/vmlinuz-5.5.0-rc5 
+sudo grubby --info=ALL | more
+sudo grubby --default-index
+sudo grubby --default-kernel
+#Th3_J0k3R[]()*;
